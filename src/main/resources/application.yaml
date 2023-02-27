@@ -1,0 +1,18 @@
+spring:
+  kafka:
+    bootstrap-servers: "localhost:9092"
+    consumer:
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        auto.offset.reset: earliest
+      group-id: test-kafka
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+kafka:
+  topic:
+    one: some.topic.name.one
+    two: some.other.topic.name.two
